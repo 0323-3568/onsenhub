@@ -1,0 +1,78 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)),
+        url('../img/onsen-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #000000; /* Black background */
+    border-color: #000000;     /* Black border */
+    color: #ffffff;            /* White text */
+    font-weight: 600;          /* Added for consistency if desired */
+}
+
+.btn-primary:hover {
+    background-color: #000000; /* Keep black background */
+    border-color: #000000;     /* Keep black border */
+    color: #ffa500;            /* Orange text on hover */
+}
+
+/* Navbar styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking form styles */
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
+}

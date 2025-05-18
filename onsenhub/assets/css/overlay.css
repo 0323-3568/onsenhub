@@ -1,0 +1,55 @@
+/* Overlay styles */
+#register-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1050;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    user-select: none;
+}
+
+#register-overlay.success {
+    background-color: #28a745; /* green */
+}
+
+#register-overlay.error {
+    background-color: #dc3545; /* red */
+}
+
+#register-overlay svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+#contact-message-overlay.success {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    z-index: 1070;
+    display: flex; 
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 250px; 
+    max-width: 400px; 
+    cursor: pointer;
+}
+
+#contact-message-overlay.success svg {
+    fill: currentColor;
+}

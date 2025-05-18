@@ -1,0 +1,337 @@
+:root {
+    --black: #000000;
+    --orange: #ffa500;
+    --light-orange: #FFE6CC;
+    --white: #FFFFFF;
+    --gray-light: #F8F9FA;
+    --gray-dark: #6C757D;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* For auth pages background */
+body.auth-page-bg {
+    background-color: var(--white);
+    background-image: radial-gradient(var(--gray-dark) 1.5px, transparent 1.5px);
+    background-size: 45px 45px;
+    background-position: 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Adjust main content area on auth pages for centering the form card */
+body.auth-page-bg main { /* Target main tag directly when body has auth-page-bg */
+    display: flex;
+    flex-grow: 1; /* Allow main to grow and fill space between header and footer */
+    align-items: center; /* Vertically center content in main */
+    justify-content: center; /* Horizontally center content in main */
+    padding: 2rem 0; /* Add some vertical padding */
+}
+
+/* Styling for the form card itself on auth pages */
+.auth-card { /* This class will be added to the card div on login/register pages */
+    background-color: rgba(255, 255, 255, 0.92) !important; /* Semi-transparent white for readability */
+}
+
+.btn-primary {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--orange);
+}
+
+.btn-primary:active {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+    color: var(--black) !important;
+}
+
+.btn-secondary {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffa500 !important;
+    border-color: #ffa500 !important;
+    color: #000000 !important;
+}
+
+.btn-outline-secondary {
+    border-color: #000000 !important;
+    color: #000000 !important;
+    background-color: transparent !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.bg-black {
+    background-color: var(--black) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+.bg-light-orange {
+    background-color: var(--light-orange) !important;
+}
+
+.text-orange {
+    color: #ffa500 !important;
+}
+
+.text-white {
+    color: var(--white) !important;
+}
+
+.btn-orange {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+    font-weight: 600;
+}
+
+.btn-orange:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--orange);
+}
+
+.btn-orange:active {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+    color: var(--black) !important;
+}
+
+.btn-outline-orange {
+    border-color: var(--orange);
+    color: var(--orange);
+    transition: all 0.3s ease;
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--orange);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: #f2f2f2;
+    color: var(--orange);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(230, 92, 0, 0.2);
+}
+
+/* Navbar link hover color */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus { /* Added :focus for accessibility and consistency */
+    color: var(--orange) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/onsen.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--white);
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    border-radius: 15px !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-image-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.features-angled-section {
+    background-color: #000000;
+    color: var(--white);
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    clip-path: polygon(0% 3vh, 100% 0%, 100% calc(100% - 3vh), 0% 100%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.features-angled-section .col-md-4 > div h4,
+.features-angled-section .col-md-4 > div p {
+    color: var(--black);
+}
+
+#contactForm .btn-orange {
+    background-color: #000000;
+    color: #fff;
+    border-color: #000000;
+}
+
+#contactForm .btn-orange:hover {
+    background-color: #000000;
+    color: #ffa500;
+    border-color: #000000;
+}
+
+#contact {
+    background-color: #ffa500;
+    padding-bottom: 5rem;
+    margin-bottom: 0;
+}
+
+.btn-hero-cta {
+    background-color: var(--orange);
+    color: var(--black);
+    font-weight: bold;
+    border: 2px solid var(--orange);
+    transition: all 0.3s ease;
+}
+
+.btn-hero-cta:hover {
+    background-color: #e69500;
+    border-color: #e69500;
+    color: var(--black);
+}
+
+.btn-hero-cta:active {
+    background-color: #cc8400 !important;
+    border-color: #cc8400 !important;
+    color: var(--black) !important;
+}
+
+.btn-hero-learn-more {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-learn-more:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+footer {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .product-image-container {
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 80px 0;
+        text-align: center;
+        background-attachment: scroll;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .hero-section .d-flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact .col-lg-6:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #contact .col-lg-6:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll !important;
+    }
+}
